@@ -1,0 +1,27 @@
+services:
+  python-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dockerfile
+    container_name: python-app
+    restart: unless-stopped
+    init: true
+    # env_file: ./.env  # Uncomment if .env file exists
+    ports:
+      - "8000:8000"  # Exposed by Dockerfile, likely FastAPI/Uvicorn
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 30s
+      start_period: 5s
+      retries: 3
+    volumes:
+      - ./logs:/app/logs  # Persist logs if needed
+      - ./uploads:/app/uploads  # Persist uploads if needed
+      - ./cache:/app/cache  # Persist cache if needed
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    driver: bridge

@@ -1,0 +1,101 @@
+{
+    "users": [
+        {
+            "username": "rouan",
+            "password": "admin123"
+        },
+        {
+            "username": "va1", 
+            "password": "va123456"
+        },
+        {
+            "username": "va2",
+            "password": "va789012"
+        },
+        {
+            "username": "temp_va",
+            "password": "temp123"
+        }
+    ],
+    "wordpressWebsites": [
+        {
+            "name": "jennie recipes",
+            "xmlrpc_url": "https://jennierecipes.com/xmlrpc.php",
+            "username": "jennierecipes1",
+            "url": "https://jennierecipes.com/",
+            "api_key": "wp_article_automatio",
+            "api_secret": "eMt6 BsAW 4YgC rXwA fUQ0 eGpL",
+            "google_sheet_tab": "jennie recipes",
+            "upload_folder_id": "1CRGcZpYrw2ntHvY778H02j0Ms177AO_A",
+            "article_template": "<H1> [recipe_title] <H2> Why This Recipe Works <H2> What You'll Need (300 words section)<H4> Ingredients <H4> Tools<H2> How to Make [recipe_title]<H2> Serving and Storage Tips for [recipe_title]<H4> Serving Tips<H2> Mistakes to Avoid while making [recipe_title]<H2> Suggestions for [recipe_title] <H2> Conclusion",
+            "midjourney_channel": {
+                "channel_id": "1388293837096751114",
+                "guild_id": "1305672448590610474",
+                "session_id": "3ea8ebb8c090b72e8793e5c33e657415"
+            },
+            "is_active": true
+        },
+        {
+            "name": "test recipes",
+			"xmlrpc_url": "https://jennierecipes.com/xmlrpc.php",
+			"username": "jennierecipes1",
+            "url": "https://jennierecipes.com/",
+            "api_key": "wp_article_automatio",
+            "api_secret": "eMt6 BsAW 4YgC rXwA fUQ0 eGpL",
+            "google_sheet_tab": "test recipes",
+            "upload_folder_id": "1CRGcZpYrw2ntHvY778H02j0Ms177AO_A",
+            "article_template": "<H1> [recipe_title] <H2> Why This Recipe Works <H2> Why You'll Love This [recipe_title] <H2> What You'll Need (300 words section)<H4> Ingredients <H4> Tools<H2> How to Make [recipe_title]<H2> Serving and Storage Tips<H4> Serving Tips<H2> Mistakes to Avoid <H2> Tips and Tricks for [recipe_title]<H2> Suggestions for [recipe_title]<H2> FAQ for [recipe_title]<H2> Conclusion",
+            "midjourney_channel": {
+                "channel_id": "1388293895103709275",
+                "guild_id": "1305672448590610474",
+                "session_id": "3ea8ebb8c090b72e8793e5c33e657415"
+            },
+            "is_active": true
+        },
+        {
+            "name": "healthy recipes",
+            "url": "https://jennierecipes.com/",
+            "xmlrpc_url": "https://jennierecipes.com/xmlrpc.php",
+            "username": "jennierecipes1",
+            "api_key": "wp_article_automatio",
+            "api_secret": "eMt6 BsAW 4YgC rXwA fUQ0 eGpL",
+            "google_sheet_tab": "healthy recipes",
+            "upload_folder_id": "1CRGcZpYrw2ntHvY778H02j0Ms177AO_A",
+            "article_template": "<H1> [recipe_title] <H2> Why This Recipe Works <H2> Why You'll Love This [recipe_title] <H2> What You'll Need (300 words section)<H4> Ingredients <H4> Tools<H2> How to Make [recipe_title]<H2> Serving and Storage Tips<H4> Serving Tips<H2> Mistakes to Avoid <H2> Tips and Tricks for [recipe_title]<H2> Suggestions for [recipe_title]<H2> FAQ for [recipe_title]<H2> Conclusion",
+            "midjourney_channel": {
+                "channel_id": "1389007441571610795",
+                "guild_id": "1305672448590610474",
+                "session_id": "3ea8ebb8c090b72e8793e5c33e657415"
+            },
+            "is_active": true
+        }
+    ],
+    "claude_api_key": "WILL_BE_LOADED_FROM_ENV",
+    "claude_model": "claude-sonnet-4-20250514",
+	"claude_recipe_card_model":"claude-opus-4-20250514",
+    "article_template": "<H1> [recipe_title] <H2> Why This Recipe Works <H2> Why You'll Love This [recipe_title] <H2> What You'll Need (300 words section)<H4> Ingredients <H4> Tools<H2> How to Make [recipe_title]<H2> Serving and Storage Tips<H4> Serving Tips<H2> Mistakes to Avoid <H2> Tips and Tricks for [recipe_title]<H2> Suggestions for [recipe_title]<H2> FAQ for [recipe_title]<H2> Conclusion",
+    "serpapi_api_key": "WILL_BE_LOADED_FROM_ENV",
+    "authority_sites": [
+        {"name": "AllRecipes", "url": "https://www.allrecipes.com/"},
+        {"name": "Food Network", "url": "https://foodnetwork.co.uk/"},
+        {"name": "Serious Eats", "url": "https://www.seriouseats.com/"},
+        {"name": "Simply Recipes", "url": "https://www.simplyrecipes.com/"}
+    ],
+    "google_sheets": {
+        "credentials_file": "lbc-automation-process.json",
+        "spreadsheet_id": "1mfWWLgOg-PIQ1ZcVR8r3nzzQvZL0iQ77EyZyWTojqeg"
+    },
+    "seo_params": {
+        "min_word_count": 2000,
+        "keyword_density": 1.0,
+        "max_slug_length": 45,
+        "max_meta_description_length": 150,
+        "max_focus_keyword_words": 4
+    },
+    "recraft": {
+        "api_key": "WILL_BE_LOADED_FROM_ENV"
+    },
+    "discord": {
+        "token": "WILL_BE_LOADED_FROM_ENV"
+    }
+}

@@ -1,0 +1,2 @@
+# Python version for Railway
+3.11

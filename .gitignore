@@ -1,0 +1,46 @@
+# .gitignore for Blog Automation
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Logs
+logs/
+*.log
+
+# Uploads
+uploads/
+
+# Cache
+cache/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Google Credentials (keep this private)
+lbc-automation-process.json
+
+# Temporary files
+*.tmp
+*.temp
+
+# NOTE: Use .env for local development, Railway environment variables for production

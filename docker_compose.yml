@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  recipe-automation:
+    build: .
+    container_name: recipe-automation-saas
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+    volumes:
+      - ./config.json:/app/config.json:ro
+      - ./logs:/app/logs
+      - ./uploads:/app/uploads
+      - ./cache:/app/cache
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - recipe-network
+
+  # Optional: Add a reverse proxy for production
+  nginx:
+    image: nginx:alpine
+    container_name: recipe-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro  # For SSL certificates
+    depends_on:
+      - recipe-automation
+    restart: unless-stopped
+    networks:
+      - recipe-network
+    profiles:
+      - production  # Only start nginx with: docker-compose --profile production up
+
+networks:
+  recipe-network:
+    driver: bridge
+
+volumes:
+  app-data:
+    driver: local

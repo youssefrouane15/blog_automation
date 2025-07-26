@@ -1,0 +1,24 @@
+{
+  "app_settings": {
+    "max_articles_per_batch": 5,
+    "article_generation_delay": 30,
+    "enable_auto_posting": true,
+    "default_post_status": "publish",
+    "cache_ttl": 3600
+  },
+  "wordpress_sites": [
+    {
+      "name": "Main Recipe Blog",
+      "url": "https://example-recipes.com/xmlrpc.php",
+      "username": "REPLACE_WITH_ENV_VAR",
+      "password": "REPLACE_WITH_ENV_VAR"
+    }
+  ],
+  "google_sheets": {
+    "credentials_file": "lbc-automation-process.json",
+    "keywords_sheet_id": "your-sheet-id-here"
+  },
+  "openai_api_key": "REPLACE_WITH_ENV_VAR",
+  "anthropic_api_key": "REPLACE_WITH_ENV_VAR",
+  "secret_key": "REPLACE_WITH_ENV_VAR"
+}
